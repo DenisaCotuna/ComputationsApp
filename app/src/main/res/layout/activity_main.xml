@@ -67,14 +67,24 @@
             android:ems="2"
             android:inputType="number|numberDecimal" />
 
+        <TextView
+            android:id="@+id/txtResult"
+            android:layout_width="382dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView3"
+            android:layout_marginTop="21dp"
+            android:text=""
+            android:textSize="18dp" />
+
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnCompute"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/txtApprox"
+            android:layout_below="@+id/txtResult"
             android:layout_marginTop="14dp"
             android:text="Compute"
             android:layout_centerHorizontal = "true"/>
+
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
