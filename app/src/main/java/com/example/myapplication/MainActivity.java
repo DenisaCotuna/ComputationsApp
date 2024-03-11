@@ -70,6 +70,23 @@ public class MainActivity extends AppCompatActivity {
                     sum = 4.0 * sum;
                     computeResult.setText(Double.toString(sum));
                 }
+                else if (value.equals("Permeability of vacuum")){
+                    double prev_term = 1;
+                    double curr_term = -1.0/3;
+                    sum = prev_term + curr_term;
+                    i = 2;
+                    int sign = -1;
+                    while (Math.abs(prev_term) - Math.abs(curr_term) > approx)
+                    {
+                        prev_term = curr_term;
+                        i++;
+                        sign *= (-1);
+                        curr_term = sign * 1.0 / (2*i-1);
+                        sum += curr_term;
+                    }
+                    sum = 16.0 * sum/0.0000001;
+                    computeResult.setText(Double.toString(sum));
+                }
                 else computeResult.setText("Incorrect string for Value");
             }
         });
